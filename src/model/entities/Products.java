@@ -41,11 +41,7 @@ public class Products {
 		this.sku = sku;
 	}
 
-	public double updatedPrice( double preice) {
-		
-		return price += price * 0.20; 
-		
-	}
+	
 	
 	
 	

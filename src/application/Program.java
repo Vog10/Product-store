@@ -4,6 +4,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Products;
+import model.services.PriceUpdate;
+import model.services.UpdatedProduct;
 
 public class Program {
 
@@ -25,7 +27,9 @@ public class Program {
 		products.setPrice(price);
 		products.setSku(sku);
 
-		products.updatedPrice(price);
+		UpdatedProduct upProduct  = new UpdatedProduct(new PriceUpdate());
+		
+		upProduct.processProduct(products);
 
 		System.out.println();
 		System.out.println("Produto Cadastrado:");
