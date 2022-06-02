@@ -4,14 +4,16 @@ public class Products {
 
 	private String name;
 	private Double price;
+	private Long sku;
 	
 	public Products() {
 		
 	}
 
-	public Products(String name, Double price) {
+	public Products(String name, Double price, Long sku) {
 		this.name = name;
 		this.price = price;
+		this.sku = sku;
 	}
 
 	public String getName() {
@@ -30,9 +32,18 @@ public class Products {
 		this.price = price;
 	}
 	
+	
+	public Long getSku() {
+		return sku;
+	}
+
+	public void setSku(Long sku) {
+		this.sku = sku;
+	}
+
 	public double updatedPrice( double preice) {
 		
-		return price += price * 0.02; 
+		return price += price * 0.20; 
 		
 	}
 	
