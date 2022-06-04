@@ -10,10 +10,13 @@ public class UpdatedProduct {
 		this.profitMargin = profitMargin;
 	}
 	
-	public void processProduct(Products products ) {
+	public void processProduct(Products products) {
 		
-		double totalValue = products.getPrice() + profitMargin.updatedPrice(products.setPrice());
-		
+	 	double upProduct = products.getPrice();
+	    double priceUp  =	upProduct + profitMargin.updatedPrice(upProduct);
+	 	
+	 	products.setPrice(priceUp);
+	 	
 	}
 	
 	

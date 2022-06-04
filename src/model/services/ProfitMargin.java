@@ -2,5 +2,5 @@ package model.services;
 
 public interface ProfitMargin {
 
-	Dou
+	double updatedPrice( double price);
 }

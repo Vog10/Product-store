@@ -27,10 +27,11 @@ public class Program {
 		products.setPrice(price);
 		products.setSku(sku);
 
-		UpdatedProduct upProduct  = new UpdatedProduct(new PriceUpdate());
+		UpdatedProduct upProduct = new UpdatedProduct(new PriceUpdate());
+		
 		
 		upProduct.processProduct(products);
-
+		
 		System.out.println();
 		System.out.println("Produto Cadastrado:");
 		System.out.println("Nome do Produto: " + products.getName());
