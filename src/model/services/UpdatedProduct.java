@@ -13,9 +13,9 @@ public class UpdatedProduct {
 	public void processProduct(Products products) {
 		
 	 	double upProduct = products.getPrice();
-	    double priceUp  =	upProduct + profitMargin.updatedPrice(upProduct);
+	    upProduct += profitMargin.updatedPrice(upProduct);
 	 	
-	 	products.setPrice(priceUp);
+	 	products.setPrice(upProduct);
 	 	
 	}
 	
