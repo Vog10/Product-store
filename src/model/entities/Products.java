@@ -1,13 +1,16 @@
 package model.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Products {
 
 	private String name;
 	private Double price;
 	private Long sku;
-	
+
 	public Products() {
-		
+
 	}
 
 	public Products(String name, Double price, Long sku) {
@@ -31,8 +34,7 @@ public class Products {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
-	
+
 	public Long getSku() {
 		return sku;
 	}
@@ -41,11 +43,16 @@ public class Products {
 		this.sku = sku;
 	}
 
+	
+	
 	public static void clearScreen() {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
-		}
-	
-	
-	
+	}
+
+	public String toString() {
+		return "\nProduto: " + name + "\n" + "Price: " + price + "\n" + "Sku: " + sku + "\n";
+
+	}
+
 }

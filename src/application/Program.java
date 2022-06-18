@@ -1,5 +1,8 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -17,6 +20,7 @@ public class Program {
 		Products products = new Products();
 		char resp = 's';
 		int cont = 0;
+		List<Products> listProducts = new ArrayList<>();
 
 		do {
 			System.out.println("Digite o nome produto:");
@@ -34,6 +38,8 @@ public class Program {
 
 			upProduct.processProduct(products);
 
+			listProducts.add(products);
+
 			System.out.println();
 			System.out.println("Produto Cadastrado:");
 			System.out.println();
@@ -42,15 +48,20 @@ public class Program {
 			System.out.println("Sku: " + products.getSku());
 			System.out.println();
 			cont++;
-			System.out.println("Ja Foram Cadastrado " + cont + " Produtos" );
+			System.out.println("Ja Foram Cadastrado " + cont + " Produtos");
 			System.out.println("Deseja Continua S/N?");
 			resp = sc.next().charAt(0);
 			sc.nextLine();
+
 			products.clearScreen();
 		} while (resp != 'n');
-		
-		
-		
+
+		for (int i = 0; i < listProducts.size(); i++) {
+			Products products2 = listProducts.get(i);
+			System.out.print("Numero do Produto: " + i);
+			System.out.println(products2);
+
+		}
 		sc.close();
 	}
 
