@@ -3,17 +3,17 @@ package model.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Products {
+public class Products<P> {
 
 	private String name;
 	private Double price;
-	private Long sku;
+	private String sku;
 
 	public Products() {
 
 	}
 
-	public Products(String name, Double price, Long sku) {
+	public Products(String name, Double price, String sku) {
 		this.name = name;
 		this.price = price;
 		this.sku = sku;
@@ -35,11 +35,11 @@ public class Products {
 		this.price = price;
 	}
 
-	public Long getSku() {
+	public String getSku() {
 		return sku;
 	}
 
-	public void setSku(Long sku) {
+	public void setSku(String sku) {
 		this.sku = sku;
 	}
 
@@ -51,7 +51,7 @@ public class Products {
 	}
 
 	public String toString() {
-		return "\nProduto: " + name + "\n" + "Price: " + price + "\n" + "Sku: " + sku + "\n";
+		return "\nProduto: " + name + "\n" + "Price: " + String.format("%.2f", price) + "\n" + "Sku: " + sku + "\n";
 
 	}
 
